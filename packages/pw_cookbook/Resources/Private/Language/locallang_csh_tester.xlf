@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:pw_cookbook/Resources/Private/Language/locallang_csh_tester.xlf" date="2022-12-17T12:12:51Z" product-name="pw_cookbook">
+		<header/>
+		<body>
+			<trans-unit id="favorite_recipes.description" resname="favorite_recipes.description">
+				<source>favoriteRecipes</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

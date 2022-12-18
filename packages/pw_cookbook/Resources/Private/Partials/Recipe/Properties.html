@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-pw-cookbook">
+	<tr>
+		<td><f:translate key="tx_pwcookbook_domain_model_recipe.title" /></td>
+		<td>{recipe.title}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_pwcookbook_domain_model_recipe.short_description" /></td>
+		<td>{recipe.shortDescription}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_pwcookbook_domain_model_recipe.description" /></td>
+		<td>{recipe.description}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_pwcookbook_domain_model_recipe.image" /></td>
+		<td>
+				<f:image src="{recipe.image.originalResource.publicUrl}" width="200"/>
+            </td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_pwcookbook_domain_model_recipe.time" /></td>
+		<td>{recipe.time -> f:format.date(format:'H:i')}</td>
+	</tr>
+</table>
+</html>

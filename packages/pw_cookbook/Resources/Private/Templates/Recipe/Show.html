@@ -1,0 +1,98 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+    <h1>{recipe.title}</h1>    
+    <div class="row">
+        <div class="col-md-4">
+            <f:if condition="{recipe.image}">
+                <f:image image="{recipe.image}" maxWidth="400" class="mb-3"/>
+                <f:if condition="{recipe.ingredients}">
+                    <h3>Ingredients</h3>
+                    <ul>
+                    <f:for each="{recipe.ingredients}" as="item">
+                        <li>{item.name}, {item.volume}</li>
+                    </f:for>
+                    </ul>
+                </f:if>
+            </f:if>
+        </div>
+        <div class="col-md-8">
+
+            <f:if condition="{recipe.categories}">
+                <div class="mb-2">
+                    <f:for each="{recipe.categories}" as="cat">
+                        <f:link.action action="list" arguments="{category: cat}" class="badge rounded-pill bg-primary">{cat.title}</f:link.action>
+                    </f:for>
+                </div>
+            </f:if>
+            <f:security.ifAuthenticated>
+                <f:if condition="{recipe.favorite}">
+                    <f:then>
+                        <f:link.action action="removeFavoriteRecipe" arguments="{recipe: recipe}" class="btn btn-primary">Remove from favorites</f:link.action>
+                    </f:then>
+                    <f:else>
+                        <f:link.action action="addFavoriteRecipe" arguments="{recipe: recipe}" class="btn btn-primary">Add as favorite</f:link.action>
+                    </f:else>
+                </f:if>
+                <br><br>
+            </f:security.ifAuthenticated>            
+            <div class="mb-2">
+                <i data-feather="clock"></i> Cooking time: <f:format.date format="H:i">{recipe.time}</f:format.date>
+            </div>
+            <p>{recipe.shortDescription -> f:format.nl2br()}</p>
+            <f:format.html>{recipe.description}</f:format.html>
+        </div>
+    </div>
+    <f:if condition="{reviews}">
+        <h2>Reviews</h2>
+        <ul>
+        <f:for each="{reviews}" as="review">
+            <li>
+                {review.date -> f:format.date(format: 'd.m.Y - H:i:s')}, Score: {review.score}<br>
+                <i>{review.text}</i>
+            </li>
+        </f:for>
+        </ul>
+    </f:if>
+    <f:security.ifAuthenticated>
+        <div>
+            <f:if condition="{recipe.reviewed}">
+                <f:then>
+                    <p>You have already reviewed this recipe</p>
+                </f:then>
+                <f:else>
+                    <h2>Add review for <strong>{recipe.title}</strong></h2>
+                    <f:form action="addReview" name="newReview" object="{review}">
+                        <f:form.hidden property="recipe" value="{recipe}" />
+                        <label for="reviewText" class="form-label">Text</label>
+                        <f:form.textarea property="text" class="form-control mb-3" id="reviewText" required="1"/>
+
+                        <label class="form-label">Score</label><br>
+
+                        <f:form.radio property="score" class="btn-check" id="option1" value="1" />
+                        <label class="btn btn-light" for="option1">1</label>
+
+                        <f:form.radio property="score" class="btn-check" id="option2" value="2" />
+                        <label class="btn btn-light" for="option2">2</label>
+
+                        <f:form.radio property="score" class="btn-check" id="option3" value="3" />
+                        <label class="btn btn-light" for="option3">3</label>
+
+                        <f:form.radio property="score" class="btn-check" id="option4" value="4" />
+                        <label class="btn btn-light" for="option4">4</label>
+
+                        <f:form.radio property="score" class="btn-check" id="option5" value="5" />
+                        <label class="btn btn-light" for="option5">5</label>
+
+                        <br>
+                        <br>
+                        <f:form.submit value="add review" class="btn btn-primary" />
+                    </f:form>
+                </f:else>
+            </f:if>
+        </div>
+    </f:security.ifAuthenticated>
+    
+</f:section>
+</html>

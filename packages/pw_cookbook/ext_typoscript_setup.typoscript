@@ -1,0 +1,21 @@
+
+config.tx_extbase {
+  persistence {
+    classes {
+
+      TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
+        subclasses {
+          Tx_PwCookbook_User = Pluswerk\PwCookbook\Domain\Model\User
+          
+        }
+      }
+      Pluswerk\PwCookbook\Domain\Model\User {
+        mapping {
+          tableName = fe_users
+          recordType = Tx_PwCookbook_User
+        }
+      }
+
+    }
+  }
+}

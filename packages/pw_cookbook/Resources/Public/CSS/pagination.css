@@ -1,0 +1,13 @@
+.f3-widget-paginator {
+    padding: 0;
+}
+
+.f3-widget-paginator li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0 5px;
+}
+
+.f3-widget-paginator li.current {
+    font-weight: bold;
+}

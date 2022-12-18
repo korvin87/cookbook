@@ -1,0 +1,36 @@
+plugin.tx_pwcookbook_pi1 {
+    view {
+        templateRootPaths.0 = EXT:pw_cookbook/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_pwcookbook_pi1.view.templateRootPath}
+        partialRootPaths.0 = EXT:pw_cookbook/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_pwcookbook_pi1.view.partialRootPath}
+        partialRootPaths.20 = EXT:numbered_pagination/Resources/Private/Partials/
+        layoutRootPaths.0 = EXT:pw_cookbook/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_pwcookbook_pi1.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_pwcookbook_pi1.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}
+page.includeJSLibs.icons = https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js
+page.includeJSLibs.icons.external = 1
+page.includeJSLibs.icons.excludeFromConcatenation = 1
+
+page.includeJSFooter.icons = EXT:pw_cookbook/Resources/Public/JavaScript/icons.js
+
+page.includeCSS.pagination = EXT:pw_cookbook/Resources/Public/CSS/pagination.css
+
+plugin.tx_pwcookbook {
+    settings {
+        parentCategoryId = 3
+    }
+}

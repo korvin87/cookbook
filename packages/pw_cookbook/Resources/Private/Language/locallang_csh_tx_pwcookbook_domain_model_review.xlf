@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:pw_cookbook/Resources/Private/Language/locallang_csh_tx_pwcookbook_domain_model_review.xlf" date="2022-12-17T21:40:14Z" product-name="pw_cookbook">
+		<header/>
+		<body>
+			<trans-unit id="text.description" resname="text.description">
+				<source>text</source>
+			</trans-unit>
+			<trans-unit id="score.description" resname="score.description">
+				<source>score</source>
+			</trans-unit>
+			<trans-unit id="date.description" resname="date.description">
+				<source>date</source>
+			</trans-unit>
+			<trans-unit id="recipe.description" resname="recipe.description">
+				<source>recipe</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

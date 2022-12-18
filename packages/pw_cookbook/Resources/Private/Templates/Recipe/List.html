@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+
+    <h1 class="mb-3">Recipes</h1>
+
+    <h2>Search recipes</h2>
+    
+    <f:form action="list" class="mb-5">
+        <div class="row">
+            <div class="col-sm-5">
+                <f:form.textfield name="search" class="form-control" placeholder="Search term" value="{search}"/>
+            </div>
+            <div class="col-sm-5">
+                <f:form.select name="category" class="form-control" options="{categories}" optionLabelField="title" prependOptionLabel="-- select category --" value="{category}" />
+            </div>
+            <div class="col-sm-2 text-right">
+                <f:form.submit value="Search" class="btn btn-primary w-100" />
+            </div>
+        </div>
+    </f:form>
+
+    <f:if condition="{pagination.paginator.numberOfPages} > 1">
+        <f:render partial="Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator, actionName: 'list'}" />
+    </f:if>
+    <div class="row">
+        <f:for each="{pagination.paginator.paginatedItems}" as="item" iteration="iterator">
+            <f:render partial="Recipe/Item" arguments="{recipe:item}" />
+        </f:for>
+    </div>
+    <f:if condition="{pagination.paginator.numberOfPages} > 1">
+        <f:render partial="Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator, actionName: 'list'}" />
+    </f:if>
+
+</f:section>
+
+</html>

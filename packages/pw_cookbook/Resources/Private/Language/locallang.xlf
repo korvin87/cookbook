@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:pw_cookbook/Resources/Private/Language/locallang.xlf" date="2022-12-17T21:40:14Z" product-name="pw_cookbook">
+		<header/>
+		<body>
+			<trans-unit id="tx_pwcookbook_domain_model_recipe" resname="tx_pwcookbook_domain_model_recipe">
+				<source>Recipe</source>
+			</trans-unit>
+			<trans-unit id="tx_pwcookbook_domain_model_recipe.title" resname="tx_pwcookbook_domain_model_recipe.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_pwcookbook_domain_model_recipe.short_description" resname="tx_pwcookbook_domain_model_recipe.short_description">
+				<source>Short Description</source>
+			</trans-unit>
+			<trans-unit id="tx_pwcookbook_domain_model_recipe.description" resname="tx_pwcookbook_domain_model_recipe.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_pwcookbook_domain_model_recipe.image" resname="tx_pwcookbook_domain_model_recipe.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_pwcookbook_domain_model_recipe.time" resname="tx_pwcookbook_domain_model_recipe.time">
+				<source>Time</source>
+			</trans-unit>
+			<trans-unit id="tx_pwcookbook_domain_model_recipe.ingredients" resname="tx_pwcookbook_domain_model_recipe.ingredients">
+				<source>Ingredients</source>
+			</trans-unit>
+			<trans-unit id="tx_pwcookbook_domain_model_review" resname="tx_pwcookbook_domain_model_review">
+				<source>Review</source>
+			</trans-unit>
+			<trans-unit id="tx_pwcookbook_domain_model_review.text" resname="tx_pwcookbook_domain_model_review.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="tx_pwcookbook_domain_model_review.score" resname="tx_pwcookbook_domain_model_review.score">
+				<source>Score</source>
+			</trans-unit>
+			<trans-unit id="tx_pwcookbook_domain_model_review.date" resname="tx_pwcookbook_domain_model_review.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_pwcookbook_domain_model_review.recipe" resname="tx_pwcookbook_domain_model_review.recipe">
+				<source>Recipe</source>
+			</trans-unit>
+			<trans-unit id="tx_pwcookbook_domain_model_ingredient" resname="tx_pwcookbook_domain_model_ingredient">
+				<source>Ingredient</source>
+			</trans-unit>
+			<trans-unit id="tx_pwcookbook_domain_model_ingredient.name" resname="tx_pwcookbook_domain_model_ingredient.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_pwcookbook_domain_model_ingredient.volume" resname="tx_pwcookbook_domain_model_ingredient.volume">
+				<source>Volume</source>
+			</trans-unit>
+			<trans-unit id="tx_pwcookbook_domain_model_ingredient.unit" resname="tx_pwcookbook_domain_model_ingredient.unit">
+				<source>Unit</source>
+			</trans-unit>
+			<trans-unit id="tx_pwcookbook_domain_model_user" resname="tx_pwcookbook_domain_model_user">
+				<source>User</source>
+			</trans-unit>
+			<trans-unit id="tx_pwcookbook_domain_model_user.favorite_recipes" resname="tx_pwcookbook_domain_model_user.favorite_recipes">
+				<source>Favorite Recipes</source>
+			</trans-unit>
+			<trans-unit id="tx_pwcookbook_domain_model_user.reviews" resname="tx_pwcookbook_domain_model_user.reviews">
+				<source>Reviews</source>
+			</trans-unit>
+			<trans-unit id="tx_pwcookbook_domain_model_recipe.reviews" resname="tx_pwcookbook_domain_model_recipe.reviews">
+				<source>Reviews</source>
+			</trans-unit>
+			<trans-unit id="tx_pwcookbook_domain_model_recipe.images" resname="tx_pwcookbook_domain_model_recipe.images">
+				<source>Images</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
